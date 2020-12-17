@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
 	const [theme, setTheme] = useState(
-		window.localStorage.getItem('theme') || 'dark'
+		window.localStorage.getItem('theme') || 'light'
 	);
 
 	useEffect(() => {
@@ -20,7 +20,7 @@ const ThemeProvider = ({ children }) => {
 	}, [lang]);
 
 	return (
-		<ThemeContext.Provider value={({ theme, setTheme }, { lang, setLang })}>
+		<ThemeContext.Provider value={{ theme, setTheme, lang, setLang }}>
 			{children}
 		</ThemeContext.Provider>
 	);

@@ -21,6 +21,14 @@ function Login() {
 							type='text'
 							placeholder={lang === 'en' ? 'Name' : 'Ism, Familiya'}
 							name='name'
+							onChange={(evt) =>
+								evt.target.value.length < 2
+									? evt.target.classList.add('bg-danger', 'text-white')
+									: evt.target.classList.remove(
+											'bg-danger',
+											'text-white'
+									  )
+							}
 							required
 						/>
 					</div>
@@ -30,6 +38,14 @@ function Login() {
 							type='email'
 							placeholder='Email'
 							name='email'
+							onChange={(evt) =>
+								evt.target.value.length <= 6
+									? evt.target.classList.add('bg-danger', 'text-white')
+									: evt.target.classList.remove(
+											'bg-danger',
+											'text-white'
+									  )
+							}
 							required
 						/>
 					</div>
@@ -39,6 +55,14 @@ function Login() {
 							type='password'
 							placeholder={lang === 'en' ? 'Password' : 'Parolingiz'}
 							name='password'
+							onChange={(evt) =>
+								evt.target.value.length <= 6
+									? evt.target.classList.add('bg-danger', 'text-white')
+									: evt.target.classList.remove(
+											'bg-danger',
+											'text-white'
+									  )
+							}
 							required
 						/>
 					</div>

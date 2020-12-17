@@ -14,16 +14,18 @@ function Footer() {
 						{lang === 'en' ? 'I am Footer!' : 'Men Quyi qismman'}
 					</h2>
 
-					<select
-						className='form-control w-50'
-						name='theme_choice'
-						defaultValue='en'
-						onChange={(evt) => {
-							setLang(evt.target.value);
-						}}>
-						<option value='en'>English</option>
-						<option value='uz'>O'zbek</option>
-					</select>
+					<div className='form-group'>
+						<select
+							className='form-control w-50'
+							name='theme_choice'
+							defaultValue={lang}
+							onChange={(evt) => {
+								setLang(evt.target.value);
+							}}>
+							<option value='en'>English</option>
+							<option value='uz'>O'zbek</option>
+						</select>
+					</div>
 
 					<p className='ml-auto d-inline-block text-white'>
 						&copy; Copyright Coding_Show

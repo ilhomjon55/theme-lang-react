@@ -5,6 +5,7 @@ import { ThemeContext } from '../../ThemeContext';
 function Header() {
 	const { theme, setTheme } = useContext(ThemeContext);
 	const { lang } = useContext(ThemeContext);
+
 	return (
 		<>
 			<header className={`p-5 bg-${theme}`}>
@@ -16,6 +17,7 @@ function Header() {
 					<select
 						className='form-control w-50'
 						name='theme_choice'
+						defaultValue={theme}
 						onChange={(evt) => {
 							setTheme(evt.target.value);
 						}}>
