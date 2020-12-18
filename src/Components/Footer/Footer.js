@@ -27,7 +27,10 @@ function Footer() {
 						</select>
 					</div>
 
-					<p className='ml-auto d-inline-block text-white'>
+					<p
+						className={`ml-auto d-inline-block text-${
+							theme === 'dark' ? 'light' : 'dark'
+						}`}>
 						&copy; Copyright Coding_Show
 					</p>
 				</div>
